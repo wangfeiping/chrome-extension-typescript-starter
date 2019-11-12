@@ -2,6 +2,8 @@ import * as moment from 'moment';
 import * as $ from 'jquery';
 
 let count = 0;
+let color : string;
+let backgroundChanged = false;
 
 $(function() {
   const queryInfo = {
@@ -20,13 +22,18 @@ $(function() {
   });
 
   $('#changeBackground').click(()=>{
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, {
-        color: '#555555'
-      },
-      function(msg) {
-        console.log("result message:", msg);
-      });
+    if (backgroundChanged) {
+      color = '#000000';
+    }else{
+      color = '#555555';
+    }
+    chrome.runtime.sendMessage({
+      color: color
+    },
+    function(response) {
+      document.body.style.backgroundColor = response;
+      backgroundChanged = !backgroundChanged
+      console.log("result message:", response);
     });
   });
 });
