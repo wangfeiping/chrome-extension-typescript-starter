@@ -1,5 +1,9 @@
 <template>
     <div>
+      <cryptoicon symbol="btc" color="orange" />
+      <cryptoicon symbol="eth" size="72" color="blue" />
+      <cryptoicon symbol="qos" size="72" color="red" />
+      <cryptoicon symbol="Xrp" size="72"/>
       <el-button type="primary" @click="tab">New tab</el-button>
     </div>
 </template>
