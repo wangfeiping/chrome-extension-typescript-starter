@@ -1,8 +1,12 @@
-# Chrome Extension TypeScript Starter
+# Chrome Extension & TypeScript & VUE Starter
 
-[![Build Status](https://travis-ci.org/chibat/chrome-extension-typescript-starter.svg?branch=master)](https://travis-ci.org/chibat/chrome-extension-typescript-starter)
+Chrome Extension, TypeScript and VUE
 
-Chrome Extension, TypeScript and Visual Studio Code
+## based on:
+
+* [chibat/chrome-extension-typescript-starter](https://github.com/chibat/chrome-extension-typescript-starter)
+
+* [rika-t/vuejs-and-typescript-chrome-extention-template](https://github.com/rika-t/vuejs-and-typescript-chrome-extention-template)
 
 ## Prerequisites
 
@@ -11,27 +15,6 @@ Chrome Extension, TypeScript and Visual Studio Code
 ## Option
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-
-## Includes the following
-
-* TypeScript
-* Webpack
-* Moment.js
-* jQuery
-* Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
-
-## Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
 
 ## Setup
 
@@ -46,26 +29,5 @@ npm install
 ## Build
 
 ```
-npm run build
+npm run build:prod
 ```
-
-## Build in watch mode
-
-### terminal
-
-```
-npm run watch
-```
-
-### Visual Studio Code
-
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `dist` directory
-
-## Test
-`npx jest` or `npm run test`

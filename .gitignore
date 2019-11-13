@@ -1,4 +1,6 @@
+node_modules
+dist
+extension.zip
+src/**/*.js
+src/**/*.js.map
 npm-debug.log
-node_modules/
-dist/
-tmp/

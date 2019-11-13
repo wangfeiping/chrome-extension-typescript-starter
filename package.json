@@ -1,36 +1,40 @@
 {
-  "name": "chrome-extension-typescript-starter",
+  "name": "vuejs-and-typescript-chrome-extention-template",
+  "description": "Vue.js and TypeScript Chrome Extension template",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
-  "main": "index.js",
-  "scripts": {
-    "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js",
-    "clean": "rimraf dist",
-    "test": "npx jest"
-  },
-  "author": "",
+  "author": "rika-t",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+  "private": false,
+  "scripts": {
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:typescript": "tsc -w --preserveWatchOutput",
+    "watch:webpack": "webpack --mode development --hide-modules --progress --watch",
+    "build:dev": "webpack --mode development --hide-modules",
+    "build:prod": "webpack --mode production  --hide-modules -p --progress --colors"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
-    "moment": "~2.24.0"
+    "element-ui": "^2.12.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
   },
   "devDependencies": {
-    "@types/chrome": "0.0.86",
-    "@types/jest": "^24.0.19",
-    "@types/jquery": "^3.3.30",
-    "copy-webpack-plugin": "^5.0.3",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "rimraf": "^2.6.3",
-    "ts-loader": "^5.4.5",
-    "typescript": "~3.4.5",
-    "webpack": "~4.17.2",
-    "webpack-cli": "~3.1.0",
-    "webpack-merge": "~4.2.1"
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.22.12",
+    "sass-loader": "^8.0.0",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
+    "url-loader": "^2.1.0",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8",
+    "zip-webpack-plugin": "^3.0.0"
   }
 }
