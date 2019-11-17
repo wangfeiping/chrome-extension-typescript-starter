@@ -2,8 +2,12 @@
     <vue-drawer-layout ref="drawerLayout">
     <div class="drawer" slot="drawer">
       <a href="javascript:void(0)" class="btn"
-           @click="handleToggleDrawer"><cryptoicon symbol="eth" size="32" color="white" /></a>
+              @click="handleToggleDrawer">
+          <unicon name="angle-double-left" fill="white"/>
+      </a>
       <div>
+        <unicon name="constructor" fill="royalblue"></unicon>
+  <unicon name="car-wash" fill="limegreen"></unicon>
           <cryptoicon symbol="btc" color="orange" />
           <cryptoicon symbol="eth" size="72" color="blue" />
           <cryptoicon symbol="qos" size="72" color="red" />
@@ -12,9 +16,10 @@
       </div>
     </div>
     <div class="content" slot="content">
-      <div class="text">This is content.</div>
       <a href="javascript:void(0)" class="btn"
-           @click="handleToggleDrawer">Show Drawer</a>
+              @click="handleToggleDrawer">
+          <unicon name="angle-double-right" fill="black"/>
+      </a>
     </div>
   </vue-drawer-layout>
 </template>
