@@ -10,12 +10,13 @@
     "watch:typescript": "tsc -w --preserveWatchOutput",
     "watch:webpack": "webpack --mode development --hide-modules --progress --watch",
     "build:dev": "webpack --mode development --hide-modules",
-    "build:prod": "webpack --mode production  --hide-modules -p --progress --colors"
+    "build": "webpack --mode production  --hide-modules -p --progress --colors"
   },
   "dependencies": {
     "element-ui": "^2.12.0",
     "vue": "^2.6.10",
     "vue-cryptoicon": "^0.1.6",
+    "vue-drawer-layout": "^1.3.0",
     "vue-router": "^3.1.3"
   },
   "devDependencies": {

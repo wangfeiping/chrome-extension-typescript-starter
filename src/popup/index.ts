@@ -3,6 +3,8 @@ import root from './root.vue'
 import * as ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Cryptoicon from 'vue-cryptoicon';
+import {DrawerLayout} from 'vue-drawer-layout'
+Vue.component(DrawerLayout.name, DrawerLayout)
 // For all icons
 // import icon from 'vue-cryptoicon/src/icons';
 
