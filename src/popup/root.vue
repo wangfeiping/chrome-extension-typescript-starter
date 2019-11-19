@@ -6,11 +6,11 @@
           <unicon name="angle-double-left" fill="white"/>
       </a>
       <div>
-        <unicon name="constructor" fill="royalblue"></unicon>
-  <unicon name="car-wash" fill="limegreen"></unicon>
+          <unicon name="constructor" fill="royalblue"></unicon>
+  　　　   <unicon name="car-wash" fill="limegreen"></unicon>
           <cryptoicon symbol="btc" color="orange" />
           <cryptoicon symbol="eth" size="72" color="blue" />
-          <cryptoicon symbol="qos" size="72" color="red" />
+          <!-- cryptoicon symbol="qos" size="72" color="red" / -->
           <cryptoicon symbol="Xrp" size="72"/>
           <el-button type="primary" @click="tab">New tab</el-button>
       </div>
@@ -20,25 +20,10 @@
               @click="handleToggleDrawer">
           <unicon name="angle-double-right" fill="black"/>
       </a>
+      <img v-bind:src="avatar" height="100vw">
     </div>
   </vue-drawer-layout>
 </template>
-<script>
-  export default {
-    data: () => ({
-    }),
-    computed: { },
-    created () {
-      console.log('New tab')
-    },
-    mounted () { },
-    methods: {
-      tab () {
-        chrome.tabs.create({ url: 'pages/app.html' })
-      }
-    }
-  }
-</script>
 <style lang="scss">
   div {
     color: blue
@@ -53,8 +38,26 @@
   }
 </style>
 <script>
+// import Avatars from '@dicebear/avatars';
+// import sprites from '@dicebear/avatars-bottts-sprites';
+
+// let avatars = new Avatars(sprites());
+// let svg = avatars.create('custom-seed');
+// alert("svg")
   export default {
+    data(){
+      return {
+        avatar: "https://avatars.dicebear.com/v2/bottts/example.svg"
+      }
+    },
     methods: {
+      created () {
+        console.log('New tab')
+      },
+      tab () {
+        console.log('create tab')
+        chrome.tabs.create({ url: 'pages/app.html' })
+      },
       handleToggleDrawer() {
         this.$refs.drawerLayout.toggle();
       }
